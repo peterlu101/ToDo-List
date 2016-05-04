@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main{
+    flex:1 0 auto;
+    padding-bottom: 0px;
+}
+.font {
+    font-family: 'Indie Flower', cursive;
+}
+.img {
+    padding: 10px;
+    
+}
+  header, main, footer {
+      padding-left: 240px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+    .paper-pic {
+        background-size: 100px 50px;
+    }
+    .italic {
+        font-style: italic;
+    }
+    .space-out {
+        margin-left: 10px;
+    }

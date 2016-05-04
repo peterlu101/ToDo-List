@@ -1,0 +1,96 @@
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            
+        </title>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/ToDo-List.css">
+        <link rel="icon" href="data:;base64,iVBORwOKGgo=">
+        
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body background="img/wood.jpg">
+        <header>
+            <nav>
+                <div class = "nav-wrapper  grey darken-3">
+                    <a href ="#" class="brand-logo">ToDo-List</a>
+                    <ul class="right">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="admin.html">Login</a></li>
+                        <li><a href="AddList.html">Add-List</a></li>
+                    </ul>
+                    <ul id="slide-out" class="side-nav fixed grey lighten-4">
+                        <li id="currentUser" class="black">Welcome Peter Lu</li>
+
+                        <li><a href="#!">ToDo-List</a></li>
+                        <li><a href="#">Number of Lists<span class="new badge" id="add-badge">1</span></a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="admin.html">Login</a></li>
+                        <li><a href="AddList.html">Add-List</a></li>
+                     </ul>
+
+                    
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <h1 class="center-align white-text text-accent-4 z-depth-4">ToDo-Lists</h1>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-small waves-effect waves-light white-out-post space-out">Check</button>   
+                <div class="col s12 main-container">
+                  
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer black">
+            <div class="container">
+                <p><a href="#" class="white-text lighten-2">Back To The Top</a></p>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    &COPY; Peter Lu 2016
+                </div>
+            </div>
+        </footer>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="libs/backendless.js"></script>
+        <script type="text/javascript" src="js/blog.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script  type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+        <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+        
+        <script id="blogs-template" type="text/x-handlebars-template">
+            {{#each posts}}
+            
+            <div class="blog-post check-post white-text">
+                <h2 class="blog-post-title">{{title}}</h2>
+                <p class="blog-post-meta">At {{format created}} by {{authorEmail}}</p>
+                <div>{{{content}}}</div>
+                <button class="btn btn-small waves-effect waves-light red delete-post"><a href="index.html" class="white-text">Delete</a></button>
+            </div>
+            
+            {{/each}}
+        </script>
+        <script id="check-done-template" type="text/x-handlebars-template">
+            <div class="white-text">
+                <h4 class="blog-post-meta italic">This ToDo-List has been completed</h4>
+                <button class="btn btn-small waves-effect waves-light white-in-post white-text"><a href="index.html" class="white-text">UnCheck</a></button>
+                <button class="btn btn-small waves-effect waves-light red delete-post"><a href="index.html" class="white-text">Delete</a></button>
+            </div>
+        </script>
+        
+        
+    </body>
+  </html>
